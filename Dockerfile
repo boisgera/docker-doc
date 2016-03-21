@@ -4,7 +4,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PYTHON python python-pip python-scipy python-matplotlib python-scipy python-pil
 ENV LATEX texlive texlive-latex-extra dvipng texlive-luatex texlive-xetex \
           texlive-lang-english texlive-lang-french
-ENV PATH /root/.local/bin:$PATH
 
 RUN apt-get update && \
     apt-get install -y $PYTHON && \
@@ -18,6 +17,7 @@ RUN apt-get update && \
       stack setup && \
       stack install pandoc && \
       stack install pandoc-citeproc && \
+      ln -s /usr/local/bin/pandoc /root/.local/bin/pandoc
     # install pandoc-templates
       cd /tmp && \
       git clone https://github.com/boisgera/pandoc-templates.git && \
