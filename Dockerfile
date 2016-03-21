@@ -9,13 +9,14 @@ RUN apt-get update && \
     apt-get install -y $PYTHON && \
     apt-get install -y $LATEX  && \
     apt-get install -y git && \
-    # install (stack and) pandoc
+    # install pandoc
       apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 575159689BEFB442 && \
       echo 'deb http://download.fpcomplete.com/ubuntu trusty main' | \
       sudo tee /etc/apt/sources.list.d/fpco.list && \
       apt-get update && apt-get install -y stack && \
       stack setup && \
       stack install pandoc && \
+      export PATH=/root/.local/bin:$PATH
     # install pandoc-templates
       cd /tmp && \
       git clone https://github.com/boisgera/pandoc-templates.git && \
