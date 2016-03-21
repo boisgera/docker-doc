@@ -22,7 +22,7 @@ RUN apt-get update && \
       cd pandoc-templates && \
       ./install.sh && \
     # install eul-doc
-      cd \tmp && \
+      cd /tmp && \
       git clone https://github.com/boisgera/eul-doc.git && \
       cd eul-doc && \
       pip install --target=.lib --ignore-installed 'about>=5.1,<6' && \
