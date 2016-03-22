@@ -10,14 +10,10 @@ RUN apt-get update && \
     apt-get install -y $LATEX  && \
     apt-get install -y git && \
     # install pandoc
-      apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 575159689BEFB442 && \
-      echo 'deb http://download.fpcomplete.com/ubuntu trusty main' | \
-      sudo tee /etc/apt/sources.list.d/fpco.list && \
-      apt-get update && apt-get install -y stack && \
-      stack setup && \
-      stack install pandoc && \
-      stack install pandoc-citeproc && \
-      cp /root/.local/bin/* /usr/local/bin/ && \
+      cd /tmp && \
+      apt-get install libgmp10 && \
+      apt-get instal curl && \
+      curl -L https://github.com/jgm/pandoc/releases/download/1.16.0.2/pandoc-1.16.0.2-1-amd64.deb > pandoc.deb && \
     # install pandoc-templates
       cd /tmp && \
       git clone https://github.com/boisgera/pandoc-templates.git && \
