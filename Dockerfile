@@ -14,6 +14,7 @@ RUN apt-get update && \
       cd /tmp && \
       apt-get install -y libgmp10 && \
       curl -L https://github.com/jgm/pandoc/releases/download/1.16.0.2/pandoc-1.16.0.2-1-amd64.deb > pandoc.deb && \
+      dpkg --install pandoc.deb && \
     # install pandoc-templates
       cd /tmp && \
       git clone https://github.com/boisgera/pandoc-templates.git && \
