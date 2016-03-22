@@ -17,8 +17,7 @@ RUN apt-get update && \
       stack setup && \
       stack install pandoc && \
       stack install pandoc-citeproc && \
-      chmod ugo+rx /root && \
-      ln -s /root/.local/bin/pandoc /usr/local/bin/pandoc && \
+      cp /root/.local/bin/* /usr/local/bin/ && \
     # install pandoc-templates
       cd /tmp && \
       git clone https://github.com/boisgera/pandoc-templates.git && \
