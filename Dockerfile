@@ -27,7 +27,7 @@ RUN apt-get update && \
       pip install . && \
     # install eul-style
       curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - && \ 
-      apt-get install nodejs && \
+      apt-get install -y nodejs && \
       cd /tmp && \
       git clone https://github.com/boisgera/eul-style.git && \
       cd eul-style && \
