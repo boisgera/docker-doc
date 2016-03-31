@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+MAINTAINER Sébastien Boisgérault <Sebastien.Boisgerault@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV PYTHON python python-pip python-scipy python-matplotlib python-scipy python-pil
