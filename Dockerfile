@@ -4,7 +4,7 @@ MAINTAINER Sébastien Boisgérault <Sebastien.Boisgerault@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV PYTHON python python-pip python-scipy python-matplotlib python-scipy python-pil
 ENV LATEX texlive texlive-latex-extra dvipng texlive-luatex texlive-xetex \
-          texlive-lang-english texlive-lang-french
+          texlive-lang-english texlive-lang-french texlive-humanities
 
 RUN apt-get update && \
     apt-get install -y $PYTHON && \
