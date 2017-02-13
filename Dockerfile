@@ -14,7 +14,7 @@ RUN apt-get update && \
     apt-get install -y zip && \
     apt-get install -y pdf2svg && \
     apt-get install -y imagemagick && \
-    apt-get install -y inconsolata && \
+    apt-get install -y fonts-inconsolata && \
     # install pandoc
       cd /tmp && \
       apt-get install -y libgmp10 && \
