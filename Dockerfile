@@ -13,7 +13,8 @@ RUN apt-get update && \
     apt-get install -y curl && \
     apt-get install -y zip && \
     apt-get install -y pdf2svg && \
-    apt-get install -y imagemagick &&\
+    apt-get install -y imagemagick && \
+    apt-get install -y inconsolata && \
     # install pandoc
       cd /tmp && \
       apt-get install -y libgmp10 && \
